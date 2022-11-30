@@ -13,7 +13,7 @@ args = parser.parse_args()
 
 receiver_email = args.receiver_email
 sender_email = args.sender_email
-password = args.sender_password
+sender_password = args.sender_password
 subject = args.subject
 receiver_name = args.receiver_name
 sender_name = args.sender_name
