@@ -1,10 +1,7 @@
 pipeline {
     agent any
     triggers {
-        //testing every 5 mins
         cron (*/5 * * * *)
-        // every saturday at 8:00am
-        // cron(59 7 * * 6)
     }
     stages {
         stage('Clone repository') {
