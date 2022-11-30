@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers {
-    cron('*/5 * * * *')
+    cron( * /5 * * * *)
     }
     stages {
       stage('Clone repository') {
@@ -9,10 +9,10 @@ pipeline {
           checkout scm
           echo "Checkout successful"
         }
-        stage('Build Script') {
-          steps {
-            sh 'python3 send_email.py'
-          }
+      }
+      stage('Run Script') {
+        steps {
+          sh 'python3 send_email.py'
         }
       }
     }
