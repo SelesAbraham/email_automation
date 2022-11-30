@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone repository') {
+            steps {
+                checkout scm
+                echo "Checkout successful"
+            }
+        stage('Run Script') {
+            steps {
+                sh 'python3 send_email.py'
+            }
+        }
+        }
+    }
+}
