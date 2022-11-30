@@ -18,8 +18,7 @@ subject = args.subject
 receiver_name = args.receiver_name
 sender_name = args.sender_name
 message = args.message
-content = """
-From: {}
+content = """From: {}
 To: {}
 Subject: {}
 Hello {},
