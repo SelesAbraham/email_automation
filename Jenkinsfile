@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Build Script') {
       steps {
-        bat 'py send_email.py -s ${params.SENDER_EMAIL} -p ${params.SENDER_PASSWORD} -r ${params.RECEIVER_EMAIL} -su ${params.SUBJECT} -rn ${params.RECEIVER_NAME} -sn ${params.SENDER_NAME} -m ${params.MESSAGE}'
+        bat 'py send_email.py -s %SENDER_EMAIL% -p %SENDER_PASSWORD% -r %RECEIVER_EMAIL% -su %SUBJECT% -rn %RECEIVER_NAME% -sn %SENDER_NAME% -m %MESSAGE%'
       }
     }
   }
