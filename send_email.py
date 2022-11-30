@@ -2,7 +2,7 @@ import smtplib, ssl
 
 receiver_email = "selessera9@gmail.com"
 sender_email = "selessera9@gmail.com"
-password = "******"
+password = "qaywsqukogrzjyzg"
 subject = "Weekly Maintenance"
 receiver_name = "Monitoring Team"
 sender_name = "SRE Team"
