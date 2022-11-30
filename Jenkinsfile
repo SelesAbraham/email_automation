@@ -6,12 +6,12 @@ pipeline {
   stages {
     stage('Check Python Version') {
       steps {
-        bat 'python --version'
+        bat 'py --version'
       }
     }
     stage('Build Script') {
       steps {
-        bat 'python send_email.py'
+        bat 'py send_email.py'
       }
     }
   }
