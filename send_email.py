@@ -34,7 +34,7 @@ Best regards,
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     try:
-        server.login(sender_email, password)
+        server.login(sender_email, sender_password)
         server.sendmail(sender_email, receiver_email, message)
         print("Email was sent successfully")
 
