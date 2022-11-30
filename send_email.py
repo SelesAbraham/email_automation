@@ -1,21 +1,34 @@
 import smtplib, ssl
+from argparse import ArgumentParser
 
-receiver_email = "selessera9@gmail.com"
-sender_email = "selessera9@gmail.com"
-password = "qaywsqukogrzjyzg"
-subject = "Weekly Maintenance"
-receiver_name = "Monitoring Team"
-sender_name = "SRE Team"
-message = """From: {}
+parser = ArgumentParser()
+parser.add_argument("-s", "--sender-email", dest="sender_email", default=None)
+parser.add_argument("-p", "--sender-password", dest="sender_password", default=None)
+parser.add_argument("-r", "--receiver-email", dest="receiver_email", default=None)
+parser.add_argument("-su", "--subject", dest="subject", default=None)
+parser.add_argument("-rn", "--receiver-name", dest="receiver_name", default=None)
+parser.add_argument("-sn", "--sender-name", dest="sender_name", default=None)
+parser.add_argument("-m", "--message", dest="message", default=None)
+args = parser.parse_args()
+
+receiver_email = args.receiver_email
+sender_email = args.sender_email
+password = args.password
+subject = args.subject
+receiver_name = args.receiver_name
+sender_name = args.sender_name
+message = args.message
+content = """
+From: {}
 To: {}
 Subject: {}
 Hello {},
 
-Please know that the weekly Maintenace will be due next week.
+{}
 
 Best regards,
 {}
-""".format(receiver_email, sender_email, subject, receiver_name, sender_name)
+""".format(receiver_email, sender_email, subject, receiver_name, message, sender_name)
 
 # Connect to Gmail SMTP Server
 context = ssl.create_default_context()
