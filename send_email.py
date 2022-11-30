@@ -18,6 +18,7 @@ subject = args.subject
 receiver_name = args.receiver_name
 sender_name = args.sender_name
 message = args.message
+print(f"receiver_email: {receiver_email}, sender: {sender_email}, password: {sender_password}")
 content = """From: {}
 To: {}
 Subject: {}
