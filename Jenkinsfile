@@ -10,8 +10,8 @@ pipeline {
       }
     }
     stage('Build Script') {
-      steps {
-        bat 'py send_email.py -s %SENDER_EMAIL% -p %SENDER_PASSWORD% -r %RECEIVER_EMAIL% -su "%SUBJECT%" -rn %RECEIVER_NAME% -sn %SENDER_NAME% -m "%MESSAGE%"'
+      steps {2
+        bat 'py send_email.py -s %SENDER_EMAIL% -p %SENDER_PASSWORD% -r %RECEIVER_EMAIL% -su "%SUBJECT%" -rn "%RECEIVER_NAME%" -sn "%SENDER_NAME%" -m "%MESSAGE%"'
       }
     }
   }
