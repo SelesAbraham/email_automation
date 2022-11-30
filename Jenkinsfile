@@ -4,10 +4,10 @@ pipeline {
     cron('59 7 * * 6')
     }
     stages {
-      stage('Clone repository') {
+      stage('Python Version') {
         steps {
-          checkout scm
-          echo "Checkout successful"
+          sh 'python3 --version'
+          echo "Done"
         }
       }
       stage('Run Script') {
