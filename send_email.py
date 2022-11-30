@@ -38,5 +38,5 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.sendmail(sender_email, receiver_email, message)
         print("Email was sent successfully")
 
-    except Exception:
-        print("There was an error while trying to send an Email")
+    except Exception as e:
+        print(f"There was an error while trying to send an Email: {e}")
