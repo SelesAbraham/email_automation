@@ -16,8 +16,11 @@ pipeline {
       }
     }
     stage('Build Script') {
+      environment {
+        SERVICE_CREDS = credentials('7c45ba2d-0dc1-4f72-b55f-41659fd44df7')
+      }
       steps {
-        bat 'py send_email.py -s %SENDER_EMAIL% -p %SENDER_PASSWORD% -r %RECEIVER_EMAIL% -su "%SUBJECT%" -rn "%RECEIVER_NAME%" -sn "%SENDER_NAME%" -m "%MESSAGE%"'
+        bat 'py send_email.py -s %SERVICE_CREDS_USR% -p %SERVICE_CREDS_PSW% -r %RECEIVER_EMAIL% -su "%SUBJECT%" -rn "%RECEIVER_NAME%" -sn "%SENDER_NAME%" -m "%MESSAGE%"'
       }
     }
   }
