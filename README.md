@@ -4,9 +4,9 @@ The goal of this project is to send automatic email updates to the recipient eve
 In this repository, there exist two files: 
 
 - Python script which is used to send email using SMTP server
-- JenkinsFile which is used to pass the parameters and trigger the Python script
+- Jenkinsfile which is used to pass the parameters and trigger the Python script
 
-Note: I have setup a Gmail test account, for Gmail SMTP server to work, it is important to enable [security settings](https://support.google.com/accounts/answer/185833) in your gmail account. 
+>NOTE: I have setup a Gmail test account, for Gmail SMTP server to work, it is important to enable [security settings](https://support.google.com/accounts/answer/185833) in your gmail account. 
 
 ## How to use?
 
@@ -18,4 +18,5 @@ Note: I have setup a Gmail test account, for Gmail SMTP server to work, it is im
 
 Once the Build is successful, the email recipient should receive an email. 
 
-Automatic trigger of build: In this repository, [Cron Job](https://github.com/SelesAbraham/email_automation/blob/main/Jenkinsfile#L4) is set to schedule every Saturday at 8:00AM. 
+### Automatic trigger of Build
+In this repository, [Cron Job](https://github.com/SelesAbraham/email_automation/blob/main/Jenkinsfile#L4) is set to schedule every Saturday at 8:00AM. 
