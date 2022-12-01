@@ -6,7 +6,7 @@ pipeline {
   parameters {
     string(name: 'SERVICE_CREDS_USR', defaultValue: '', description: 'Enter sender email-id')
     password(name: 'SERVICE_CREDS_PSW', defaultValue: 'SECRET', description:'Enter a password')
-    string(name: 'RECEIVER_EMAIL', defaultValue: 'no-test.sre@test.com', description: 'Enter recipients email id')
+    string(name: 'RECEIVER_EMAIL', defaultValue: 'selessera9@gmail.com', description: 'Enter recipients email id')
     string(name: 'SUBJECT', defaultValue: 'Weekly Maintenance', description: 'Enter subject of email')
     string(name: 'RECEIVER_NAME', defaultValue: 'Monitoring Team', description: 'To')
     string(name: 'SENDER_NAME', defaultValue: 'SRE Team', description: 'From')
