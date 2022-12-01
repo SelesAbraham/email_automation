@@ -1,8 +1,8 @@
 pipeline {
   agent any
   parameters {
-    string(name: 'SENDER_EMAIL', defaultValue: '', description: 'Enter sender email-id')
-    password(name: 'SENDER_PASSWORD', defaultValue: 'SECRET', description:'Enter a password')
+    string(name: 'SERVICE_CREDS_USR', defaultValue: '', description: 'Enter sender email-id')
+    password(name: 'SERVICE_CREDS_PSW', defaultValue: 'SECRET', description:'Enter a password')
     string(name: 'RECEIVER_EMAIL', defaultValue: '', description: 'Enter recipients email id')
     string(name: 'SUBJECT', defaultValue: 'Weekly Maintenance', description: 'Enter subject of email')
     string(name: 'RECEIVER_NAME', defaultValue: 'Monitoring Team', description: 'To')
