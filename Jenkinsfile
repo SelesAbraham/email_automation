@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers {
-    cron('H 8 * * 6')
+    cron('H/2 * * * *')
   }
   parameters {
     string(name: 'SERVICE_CREDS_USR', defaultValue: '', description: 'Enter sender email-id')
